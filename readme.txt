@@ -143,7 +143,7 @@ Step 9: submit pull request
  	@trymelz Merge branch 'master' into first_release
 
 
-Step 10: update local workspace (the github has new stuff from other peoples pull request)
+Step 10: resolving conflict (assume the github has new stuff from other peoples in first_release branch)
 	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git pull origin first_release
 	remote: Enumerating objects: 7, done.
 	remote: Counting objects: 100% (7/7), done.
@@ -168,9 +168,8 @@ Step 10: update local workspace (the github has new stuff from other peoples pul
 	        both modified:   readme.txt
 
 	no changes added to commit (use "git add" and/or "git commit -a")
-	<fix the conflict by editing readme.txt>
+	
+	fix the conflict by editing readme.txt
 	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git add readme.txt
 	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git commit -m 'fix confilict'
 	[first_release dd5c951] fix confilict
-
-	
