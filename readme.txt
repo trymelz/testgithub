@@ -76,7 +76,7 @@ Step 6: setup ssh key and add it in your github account
 	login your github account->click your photo at top right corner->setting->SSH and CPG Keys
 	add the above keys into SSH key
 
-Step 7: push to github repository
+Step 7: push master branch to github repository
 	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git remote add origin git@github.com:trymelz/testgithub.git
 	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git push -u origin master
 	The authenticity of host 'github.com (192.30.253.112)' can't be established.
@@ -93,5 +93,24 @@ Step 7: push to github repository
 	 * [new branch]      master -> master
 	Branch 'master' set up to track remote branch 'master' from 'origin'.
 
+Step 8: push other branch to github repository
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git branch
+	  first_release
+	* master
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git push origin first_release
+	Total 0 (delta 0), reused 0 (delta 0)
+	remote:
+	remote: Create a pull request for 'first_release' on GitHub by visiting:
+	remote:      https://github.com/trymelz/testgithub/pull/new/first_release
+	remote:
+	To github.com:trymelz/testgithub.git
+	 * [new branch]      first_release -> first_release	
+	
+
+	You might be wondering what that "origin" word means in the command above. What happens is that when you clone a remote repository to your local machine, git creates an alias for you. In nearly all cases this alias is called "origin." It's essentially shorthand for the remote repository's URL.
+
+Step 9: submit pull request
+	now you default branch in github is master. When you click "2 branches", "new pull request" button showes on "first_release" branch
+	when you click it, the errow message appear: "master is up to date with all commits from first_release. Try switching the base for your comparison."
 
 	
