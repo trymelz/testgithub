@@ -113,10 +113,64 @@ Step 9: submit pull request
 	now you default branch in github is master. When you click "2 branches", "new pull request" button showes on "first_release" branch
 	when you click it, the errow message appear: "master is up to date with all commits from first_release. Try switching the base for your comparison."
 
+	<note> when submit pull request, if base=master and compare=first_relase, it means try to merge commits from first_release to master
+	
+
 	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git checkout first_release
 	Switched to branch 'first_release'
 
 	note: after you switch to first_release, the file in the workspace will replaced by those in the first_release
+	change readme.txt file and commit and push to github first_release branch
+
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git add readme.txt
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git commit -m 'adding pull step in first_release branch'
+	[first_release b3e067e] adding pull step in first_release branch
+	 1 file changed, 107 insertions(+), 2 deletions(-)
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git push origin first_release
+	Counting objects: 3, done.
+	Delta compression using up to 4 threads.
+	Compressing objects: 100% (2/2), done.
+	Writing objects: 100% (3/3), 2.83 KiB | 580.00 KiB/s, done.
+	Total 3 (delta 0), reused 0 (delta 0)
+	To github.com:trymelz/testgithub.git
+	   25c8f9f..b3e067e  first_release -> first_release
+
+	note: now you can click "new pull request" button showes on "first_release" branch
+
+	now click merge request, after solving conflict, we have the following message
+
+	@trymelz adding pull step in first_release branch
+ 	@trymelz Merge branch 'master' into first_release
+
+
+Step 10: update local workspace (the github has new stuff from other peoples pull request)
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git pull origin first_release
+	remote: Enumerating objects: 7, done.
+	remote: Counting objects: 100% (7/7), done.
+	remote: Compressing objects: 100% (2/2), done.
+	remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+	Unpacking objects: 100% (3/3), done.
+	From github.com:trymelz/testgithub
+	 * branch            first_release -> FETCH_HEAD
+	   b3e067e..d46c5f1  first_release -> origin/first_release
+	Auto-merging readme.txt
+	CONFLICT (content): Merge conflict in readme.txt
+	Automatic merge failed; fix conflicts and then commit the result.
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git status
+	On branch first_release
+	You have unmerged paths.
+	  (fix conflicts and run "git commit")
+	  (use "git merge --abort" to abort the merge)
+
+	Unmerged paths:
+	  (use "git add <file>..." to mark resolution)
+
+	        both modified:   readme.txt
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+	<fix the conflict by editing readme.txt>
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git add readme.txt
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git commit -m 'fix confilict'
+	[first_release dd5c951] fix confilict
 
 	
-
