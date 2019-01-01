@@ -141,3 +141,36 @@ Step 9: submit pull request
 
 	@trymelz adding pull step in first_release branch
  	@trymelz Merge branch 'master' into first_release
+
+
+Step 10: update local workspace (the github has new stuff from other peoples pull request)
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git pull origin first_release
+	remote: Enumerating objects: 7, done.
+	remote: Counting objects: 100% (7/7), done.
+	remote: Compressing objects: 100% (2/2), done.
+	remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+	Unpacking objects: 100% (3/3), done.
+	From github.com:trymelz/testgithub
+	 * branch            first_release -> FETCH_HEAD
+	   b3e067e..d46c5f1  first_release -> origin/first_release
+	Auto-merging readme.txt
+	CONFLICT (content): Merge conflict in readme.txt
+	Automatic merge failed; fix conflicts and then commit the result.
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git status
+	On branch first_release
+	You have unmerged paths.
+	  (fix conflicts and run "git commit")
+	  (use "git merge --abort" to abort the merge)
+
+	Unmerged paths:
+	  (use "git add <file>..." to mark resolution)
+
+	        both modified:   readme.txt
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+	<fix the conflict by editing readme.txt>
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git add readme.txt
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git commit -m 'fix confilict'
+	[first_release dd5c951] fix confilict
+
+	
