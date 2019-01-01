@@ -43,7 +43,7 @@ Step 5: create a new repository in github
 	…or import code from another repository
 	You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
-Step 6: setup ssh key and add it in your github account
+Step 6: setup ssh key and add it in your github account (works on both windows and linux subsystem)
 	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ ssh-keygen -t rsa -b 4096 -C "trymelz@yahoo.com"
 	Generating public/private rsa key pair.
 	Enter file in which to save the key (/home/linfa/.ssh/id_rsa):
