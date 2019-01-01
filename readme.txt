@@ -113,4 +113,10 @@ Step 9: submit pull request
 	now you default branch in github is master. When you click "2 branches", "new pull request" button showes on "first_release" branch
 	when you click it, the errow message appear: "master is up to date with all commits from first_release. Try switching the base for your comparison."
 
+	linfa@ThinkCenter1:~/LinfaWork/Python/DataScrapy/you-get/testgithub$ git checkout first_release
+	Switched to branch 'first_release'
+
+	note: after you switch to first_release, the file in the workspace will replaced by those in the first_release
+
 	
+
