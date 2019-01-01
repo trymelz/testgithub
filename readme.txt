@@ -14,3 +14,12 @@ Step 3: change and commit
 	[master (root-commit) a6d953d] 1st and second steps
  	 1 file changed, 10 insertions(+)
  	 create mode 100644 readme.txt
+
+Step 4: creating new branch
+	linfa@ThinkCenter1:~/Python/DataScrapy/you-get/testgithub$ git checkout -b first_release
+	Switched to a new branch 'first_release'
+	linfa@ThinkCenter1:~/Python/DataScrapy/you-get/testgithub$ git branch
+	* first_release
+	  master
+	linfa@ThinkCenter1:~/Python/DataScrapy/you-get/testgithub$ git checkout master
+	Switched to branch 'master'
